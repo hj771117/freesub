@@ -6,20 +6,6 @@ log-level: info
 proxies:
 - name: 🇵🇱 PL 01 - xiaohe
   type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM-TOOTFFARANGI
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇵🇱 PL 02 - xiaohe
-  type: vless
   server: pl4.h1cloud.net
   port: 25080
   uuid: 0c3ad9d5-cffd-4748-b8df-ab145288144b
@@ -30,7 +16,7 @@ proxies:
     public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI
   servername: www.ceneo.pl
   client-fingerprint: chrome
-- name: 🇵🇱 PL 03 - xiaohe
+- name: 🇵🇱 PL 02 - xiaohe
   type: vless
   server: 2.26.225.89
   port: 8443
@@ -39,7 +25,7 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: pl.flen-vpn.xyz
-- name: 🇵🇱 PL 04 - xiaohe
+- name: 🇵🇱 PL 03 - xiaohe
   type: vless
   server: pl.flen-vpn.xyz
   port: 8443
@@ -48,30 +34,6 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: pl.flen-vpn.xyz
-- name: 🇵🇱 PL 05 - xiaohe
-  type: vless
-  server: pl4.h1cloud.net
-  port: 25080
-  uuid: 0c3ad9d5-cffd-4748-b8df-ab145288144b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI
-  servername: www.ceneo.pl
-  client-fingerprint: chrome
-- name: 🇵🇱 PL 06 - xiaohe
-  type: vless
-  server: pl4.h1cloud.net
-  port: 25080
-  uuid: 0c3ad9d5-cffd-4748-b8df-ab145288144b
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI
-  servername: www.ceneo.pl
-  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -80,9 +42,6 @@ proxy-groups:
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
   - 🇵🇱 PL 03 - xiaohe
-  - 🇵🇱 PL 04 - xiaohe
-  - 🇵🇱 PL 05 - xiaohe
-  - 🇵🇱 PL 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -91,8 +50,5 @@ proxy-groups:
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
   - 🇵🇱 PL 03 - xiaohe
-  - 🇵🇱 PL 04 - xiaohe
-  - 🇵🇱 PL 05 - xiaohe
-  - 🇵🇱 PL 06 - xiaohe
 rules:
 - MATCH,PROXIES
